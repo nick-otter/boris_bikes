@@ -25,7 +25,7 @@ I want to search for my customers by their surnames.
 | Objects          | Messages     |
 |------------------|-------------:|
 | Person           |              |
-| Bike             | working_bike |
+| Bike             | working?     |
 | Docking Station  | release_bike |
 
 
