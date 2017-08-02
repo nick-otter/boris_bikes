@@ -1,5 +1,12 @@
+$LOAD_PATH << '.'
+
 class DockingStation
+  class Bike
+    def working?
+      true
+    end
+  end
   def release_bike
-    puts "Your bike has been released!"
+    bike = Bike.new
   end
 end
