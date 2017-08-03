@@ -1,21 +1,26 @@
-$LOAD_PATH << '.'
+require_relative '../lib/docking_station'
+require_relative '../lib/bike'
 
 class DockingStation
-    class Bike
-        def working?
-            true
-        end
-    end
 
-  attr_reader :bike
+  attr_accessor :bikes
+
+  def initialize
+    @bikes = []
+  end
 
   def release_bike
-    raise 'No bikes available' unless @bike
-    @bike
+    if @bikes.empty?
+    raise 'No bikes available'
+    else
+    Bike.new
+  end
+end
+
+  def dock_bike
+    p "bike docked"
   end
 
-  def dock(bike)
-    @bike = bike
+  def isDocked
   end
-
 end
