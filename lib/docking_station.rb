@@ -1,12 +1,13 @@
-require_relative '../lib/docking_station'
 require_relative '../lib/bike'
 
 class DockingStation
 
   attr_accessor :bikes
+  DEFAULT_CAPACITY = 20
 
-  def initialize
+  def initialize()
     @bikes = []
+    @capacity = DEFAULT_CAPACITY
   end
 
   def release_bike
@@ -17,9 +18,13 @@ class DockingStation
   end
 end
 
-  def dock_bike
-    p "bike docked"
+  def dock_bike(bike)
+   if @bikes.length >= @capacity
+     raise "No docking slots available"
+   else
+     @bikes << bike
   end
+end
 
   def isDocked
   end
