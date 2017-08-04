@@ -11,26 +11,34 @@ class DockingStation
     @capacity = capacity
   end
 
-  def release_bike
+  def release_bike(bike)
+    # check if bike is broken or not, don't release if broken
+    @bikes.reject! {|x| x == "#{bike} is a broken bike"}
     if @bikes.empty?
-    raise 'No bikes available'
+      raise 'No bikes available'
     else
-    @bikes
-    @bikes.pop
+      @bikes
+      @bikes.pop
     end
   end
-  
+
   def show_capacity
      @capacity
   end
-  
-  def dock_bike(bike)
-   if full?
-    raise "No docking slots available"
+
+  def dock_bike(bike, working = true)
+  # report bike as broken
+  # if bike broke ???
+  # accept all bikes but mark broken bikes
+   if full? then raise "No docking slots available"
+   elsif working == false
+     broken_bike = "#{bike} is a broken bike"
+     @bikes << broken_bike
    else
      @bikes << bike
   end
-  end
+end
+
 
   private
 
@@ -45,7 +53,15 @@ end
 
 
 class Bike
-  def working?
-    true
+
+  attr_accessor :working
+
+  def initialize(working = true)
+    @working = working
   end
+
+  def working?
+    @working == true
+  end
+
 end
