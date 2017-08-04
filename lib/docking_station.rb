@@ -6,9 +6,9 @@ class DockingStation
   # Challenge 16 passed
   DEFAULT_CAPACITY = 20
 
-  def initialize()
+  def initialize(capacity = DEFAULT_CAPACITY)
     @bikes = []
-    @capacity = DEFAULT_CAPACITY
+    @capacity = capacity
   end
 
   def release_bike
@@ -19,7 +19,11 @@ class DockingStation
     @bikes.pop
     end
   end
-
+  
+  def show_capacity
+     @capacity
+  end
+  
   def dock_bike(bike)
    if full?
     raise "No docking slots available"
@@ -37,7 +41,6 @@ class DockingStation
   def empty?
    @bikes.size == 0
   end
-
 end
 
 

@@ -16,6 +16,11 @@ describe DockingStation do
     20.times {subject.dock_bike Bike.new}
       expect {subject.dock_bike Bike.new}.to raise_error('No docking slots available')
   end
+
+  it "Checks default capacity is 20" do
+  20.times {subject.dock_bike Bike.new}
+    expect {subject.dock_bike Bike.new}.to raise_error('No docking slots available')
+  end
 end
 
 describe Bike do
