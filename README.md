@@ -1,5 +1,5 @@
 ## Boris Bikes
-Authors: Lizzie Hard, Nick Otter
+Authors: Lizzie Hard, Nick Otter, Denis Golub
 
 Built at Makers Academy.
 
