@@ -3,6 +3,7 @@ require_relative '../lib/bike'
 class DockingStation
 
   attr_accessor :bikes
+  # Challenge 16 passed
   DEFAULT_CAPACITY = 20
 
   def initialize()
@@ -26,14 +27,14 @@ class DockingStation
      @bikes << bike
   end
   end
-  
+
   private
 
   def full?
   @bikes.size >= @capacity
   end
 
-  def empty? 
+  def empty?
    @bikes.size == 0
   end
 
