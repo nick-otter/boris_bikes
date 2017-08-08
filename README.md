@@ -11,4 +11,4 @@ Transport for London, the body responsible for delivery of a new bike system hav
 
 ## Acknowledgments
 
-* Makers Academy, Kay Lovelace
+* [Makers Academy](http://www.makersacademy.com/), [Kay Lovelace](https://github.com/neoeno)
